@@ -1,0 +1,197 @@
+.we-turn {
+    padding-top: 33px;
+    padding-bottom: 60px;
+    margin-left: -15px;
+    display: grid;
+    grid-template-columns: 100%;
+    row-gap: 30px;
+
+    &__title {
+        font-size: 30px;
+        line-height: 37px;
+        background: $gradient-color-red-text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        color: transparent;
+    }
+
+    &__paragraph {
+        padding-bottom: 30px;
+    }
+
+    &__numbers {
+        border-left: solid 4px $grey-color-separator;
+        padding-left: 30px;
+
+        &-card {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        &-card:not(:last-child) {
+            margin-bottom: 40px;
+        }
+
+        &-title {
+            font-size: 36px;
+            line-height: 44px;
+            text-align: center;
+            background: $gradient-color-red-text-reversed;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            color: transparent;
+            margin-bottom: 10px;
+        }
+    }
+
+    &__number-01::before {
+        content: url(../img/flag.svg);
+        margin-right: 8px;
+        transform: translateY(12%);
+        display: inline-block;
+        width: 32px;
+        height: 32px;
+    }
+
+    &__number-02::before {
+        content: url(../img/bag.svg);
+        margin-right: 8px;
+        display: inline-block;
+        width: 32px;
+        height: 32px;
+    }
+
+    &__number-03::before {
+        content: url(../img/star.svg);
+        margin-right: 8px;
+        transform: translateY(11%);
+        display: inline-block;
+        width: 32px;
+        height: 32px;
+    }
+
+    &__team {
+        margin: 0 -30px;
+        padding: 10px 30px;
+        font-weight: 700;
+        font-size: 36px;
+        line-height: 44px;
+        text-align: center;
+        letter-spacing: 13px;
+        text-transform: uppercase;
+        color: #ffffff;
+        opacity: 0.8;
+        text-shadow: 0px 15px 30px rgba(40, 40, 86, 0.8);
+        padding: 35px 113px;
+        background: url(../img/people.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    &__text {
+        font-size: 19px;
+        font-weight: 400;
+        line-height: 30px;
+        color: #000000;
+
+        &-sm {
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 20px;
+            color: $main-color;
+        }
+    }
+
+    &__accent-text {
+        font-size: 30px;
+        line-height: 37px;
+        background: linear-gradient(90.13deg, #F0145A 0.84%, #EF8080 99.96%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+}
+
+@media (min-width: 768px) {
+    .we-turn {
+        padding-top: 33px;
+        padding-bottom: 60px;
+        margin-left: -27px;
+        gap: 30px;
+
+        &__title {
+            font-size: 38px;
+            line-height: 46px;
+        }
+
+        &__team {
+            margin: 0 -60px;
+            font-size: 46px;
+            line-height: 56px;
+            letter-spacing: 63px;
+            padding: 90px 220px;
+            margin-top: 30px;
+            margin-bottom: 30px;
+        }
+
+        &__accent-text {
+            font-size: 38px;
+            line-height: 46px;
+        }
+    }
+}
+
+@media (min-width: 1024px) {
+    .we-turn {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: repeat(4 min-content);
+        padding-top: 60px;
+
+        &__title {
+            grid-column: 1;
+            grid-row: 1;
+        }
+
+        &__text-01 {
+            grid-column: 1;
+            grid-row: 2;
+        }
+
+        &__numbers {
+            grid-column: 2;
+            grid-row: span 2;
+        }
+
+        &__team {
+            grid-row: 3;
+            grid-column: span 2;
+            padding: 102px 288px;
+            font-size: 86px;
+            line-height: 105px;
+        }
+
+        &__text {
+            margin-top: -6px;
+        }
+
+        &__accent-text {
+            margin-left: 30px;
+        }
+    }
+}
+
+@media (min-width: 1320px) {
+    .we-turn {
+        padding-left: 120px;
+
+        &__team {
+            padding: 160px 481px;
+            font-size: 96px;
+            line-height: 117px;
+        }
+    }
+}

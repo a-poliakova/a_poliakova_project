@@ -1,0 +1,47 @@
+// Colors
+// Main colors
+$main-color: #323264;
+$main-color-alt: #46466e;
+$main-color-soft: #686887;
+// Accent colors
+$accent-color: #f0145a;
+// Active colors
+$active-color-regular: #24a3ff;
+$active-color-hover: #0085ff;
+$active-color-active: #006ccf;
+// Grey colors
+$grey-color-bg: #f5f5fa;
+$grey-color-bg-alt: #ededf7;
+$grey-color-text: #b3b3ba;
+$grey-color-separator: #e6e6f0;
+// Gradient colors
+$gradient-color-main: linear-gradient(
+    128.63deg,
+    #323264 0%,
+    #323264 73.96%,
+    #a54b5f 100%
+);
+$gradient-color-soft: linear-gradient(
+    42.01deg,
+    #323264 14.33%,
+    #323264 51.39%,
+    #7a425e 87.53%
+);
+$gradient-color-red: linear-gradient(323.35deg, #f0145a 6.7%, #693264 70.36%);
+$gradient-color-supersoft: linear-gradient(
+    228.57deg,
+    #323264 11.93%,
+    #323264 57.17%,
+    #643e72 87.46%
+);
+$gradient-color-red-text: linear-gradient(
+    90.13deg,
+    #f0145a 0.84%,
+    #ef8080 99.96%
+);
+$gradient-color-red-text-reversed: linear-gradient(
+    90.13deg,
+    #ef8080 0.84%,
+    #f0145a 99.96%
+);
+

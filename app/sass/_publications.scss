@@ -1,0 +1,155 @@
+.publications {
+    background: $grey-color-bg;
+
+    &__box {
+        padding-top: 30px;
+    }
+
+    &__link {
+        display: inline-block;
+        text-decoration: none;
+        text-transform: uppercase;
+        font-size: 14px;
+        line-height: 17px;
+        letter-spacing: 1px;
+        color: $active-color-regular;
+        transition-duration: 1s;
+        transition-property: all;
+
+        & svg path {
+            transition-duration: 1s;
+            transition-property: all;
+        }
+    }
+
+    &__link:hover svg path {
+        stroke: $accent-color;
+    }
+
+    &__link:hover {
+        color: $accent-color;
+    }
+
+    &__title {
+        font-size: 30px;
+        line-height: 37px;
+        background-image: $gradient-color-red-text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        padding-bottom: 5px;
+        margin-top: 2px;
+    }
+
+    &__items {
+        margin-top: 24px;
+        display: grid;
+        grid-template-columns: auto;
+        gap: 30px;
+    }
+
+    &__inset {
+        background: #ffffff;
+        padding: 0px 30px 30px;
+    }
+
+    &__inset-img_01 {
+        background: url(../img/publ-01.jpg);
+    }
+
+    &__inset-img_02 {
+        background: url(../img/publ-02.jpg);
+    }
+
+    &__inset-img_03 {
+        background: url(../img/publ-03.jpg);
+    }
+
+    &__inset-img {
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        height: 200px;
+        margin: 0 -30px;
+        margin-bottom: 32px;
+    }
+
+    &__inset-link {
+        text-decoration: none;
+        font-size: 16px;
+        line-height: 20px;
+        color: $active-color-regular;
+        transition-duration: 1s;
+        transition-property: all;
+    }
+
+    &__inset-link:hover {
+        color: $accent-color;
+    }
+
+    &__inset-date {
+        margin: 15px 0;
+        font-size: 12px;
+        line-height: 15px;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        color: $grey-color-text;
+    }
+
+    &__inset-text {
+        font-weight: 400;
+        border-top: solid 4px $grey-color-separator;
+        font-size: 14px;
+        line-height: 22px;
+        color: #000000;
+        padding-top: 14px;
+    }
+}
+
+@media (min-width: 768px) {
+    .publications {
+        &__link {
+            padding-left: 31px;
+        }
+
+        &__title {
+            font-size: 38px;
+            line-height: 46px;
+            padding-left: 28px;
+            margin-top: 8px;
+        }
+
+        &__items {
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(2, min-content);
+            padding-left: 30px;
+        }
+
+
+        &__inset:last-child {
+            grid-column: 1 / span 2;
+        }
+    }
+}
+
+@media (min-width: 1024px) {
+    .publications {
+
+        &__title {
+            margin-top: 6px;
+        }
+
+        &__items {
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: 1 min-content;
+        }
+
+        &__inset:last-child {
+            grid-column: 3;
+        }
+
+        &__inset-img {
+            margin-bottom: 26px;
+        }
+
+    }
+}

@@ -1,0 +1,174 @@
+.footer {
+    padding-top: 30px;
+    background: $grey-color-bg;
+    padding-bottom: 30px;
+
+    &__box {
+        display: grid;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    &__parent {
+        padding-top: 30px;
+        border-top: solid 2px $grey-color-separator;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    &__address-box {
+        display: grid;
+        text-align: center;
+        gap: 10px;
+    }
+
+    &__address {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 20px;
+        color: $main-color;
+    }
+
+    &__point {
+        background: $grey-color-text;
+        width: 6px;
+        height: 6px;
+        border-radius: 50%;
+        display: none;
+    }
+
+    &__onmap {
+        text-decoration: none;
+        font-size: 12px;
+        line-height: 15px;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        color: $active-color-regular;
+        transform: translateY(10%);
+        transition-duration: 1s;
+        transition-property: all;
+        padding-bottom: 2px;
+    }
+
+    &__onmap:hover {
+        color: $accent-color;
+    }
+
+    &__down-line {
+        margin-top: 17px;
+        margin-bottom: 30px;
+        display: grid;
+        text-align: center;
+        gap: 10px;
+        justify-items: center;
+    }
+
+    &__fb {
+        display: flex;
+    }
+
+    &__fb svg path {
+        transition-duration: 300ms;
+        transition-property: fill;
+    }
+
+    &__fb:hover svg path {
+        fill: $accent-color;
+    }
+
+    &__phone {
+        text-decoration: none;
+        font-size: 16px;
+        line-height: 20px;
+        color: $main-color-alt;
+    }
+
+    &__mail {
+        text-decoration: none;
+        font-size: 16px;
+        line-height: 20px;
+        color: $active-color-regular;
+        transition-duration: 1s;
+        transition-property: all;
+    }
+
+    &__mail:hover {
+        color: $accent-color;
+    }
+
+    &__law {
+        font-weight: 400;
+        text-decoration: none;
+        font-size: 16px;
+        line-height: 20px;
+        text-align: center;
+        color: $grey-color-text;
+    }
+
+    &__hlegal {
+        text-transform: uppercase;
+    }
+}
+
+@media (min-width: 768px) {
+    .footer {
+        &__point {
+            display: block;
+        }
+
+        &__parent {
+            align-items: center;
+        }
+
+        &__address-box {
+            grid-template-columns: repeat(3, max-content);
+            align-items: center;
+        }
+
+        &__onmap {
+            margin-bottom: 0;
+        }
+
+        &__down-line {
+            grid-template-columns: repeat(5, max-content);
+            align-items: center;
+            text-align: left;
+        }
+
+        &__law {
+            align-self: center;
+        }
+    }
+}
+
+@media (min-width: 1024px) {
+    .footer {
+        &__box {
+            display: grid;
+        }
+
+        &__parent {
+            display: grid;
+            max-width: 100%;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: min-content min-content;
+            justify-content: space-between;
+        }
+
+        &__address-box {
+            grid-column: 1;
+        }
+
+        &__down-line {
+            grid-row: 2;
+            grid-column: 1;
+        }
+
+        &__law {
+            grid-row: 1;
+            grid-column: 2;
+            text-align: right;
+        }
+    }
+}

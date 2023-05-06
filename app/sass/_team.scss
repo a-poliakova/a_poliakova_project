@@ -1,0 +1,150 @@
+.team {
+    margin-top: 48px;
+
+    &__link {
+        display: inline-block;
+        text-decoration: none;
+        text-transform: uppercase;
+        font-size: 14px;
+        line-height: 17px;
+        letter-spacing: 1px;
+        color: $active-color-regular;
+        margin-bottom: 5px;
+        transition-duration: 1s;
+        transition-property: all;
+
+        & svg path {
+            transition-duration: 1s;
+            transition-property: all;
+        }
+    }
+
+    &__link:hover svg path {
+        stroke: $accent-color;
+    }
+
+    &__link:hover {
+        color: $accent-color;
+    }
+
+    &__parent {
+        background-color: $grey-color-bg;
+        border-radius: 12px;
+        display: grid;
+        grid-template-columns: 100%;
+    }
+
+    &__box {
+        padding: 30px 30px;
+    }
+
+    &__title {
+        margin-bottom: 29px;
+        font-weight: 700;
+        font-size: 28px;
+        line-height: 37px;
+        background-image: $gradient-color-red-text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    &__text-01 {
+        color: $grey-color-text;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 20px;
+        padding-top: 39px;
+        margin-bottom: 6px;
+    }
+
+    &__text-02 {
+        font-weight: 400;
+        font-size: 14px;
+        letter-spacing: 0.1em;
+        line-height: 22px;
+        color: $grey-color-text;
+    }
+
+    &__btn {
+        cursor: pointer;
+        width: 16px;
+        height: 16px;
+        background-color: rgba(36, 163, 255, 0.2);
+        border: none;
+        border-radius: 50%;
+
+        &-parent {
+            text-align: center;
+            margin-top: 30px;
+
+            button:not(:last-child) {
+                margin-right: 10px;
+            }
+        }
+    }
+
+    &__current {
+        background-color: rgba(36, 163, 255, 1);
+    }
+
+    &__btn:not(.team__current) {
+        transition-duration: 1s;
+        transition-property: all;
+    }
+
+    &__btn:not(.team__current):hover {
+        background-color: rgba(36, 163, 255, 0.6);
+    }
+}
+
+@media (min-width: 768px) {
+    .team {
+        &__title {
+            font-size: 38px;
+            line-height: 46px;
+            margin-bottom: -16px;
+        }
+
+        &__box {
+            padding: 30px 60px;
+        }
+
+        &__text-01 {
+            padding-top: 46px;
+        }
+    }
+}
+
+@media (min-width: 1024px) {
+    .team {
+        margin-top: 50px;
+
+        &__parent {
+            grid-template-columns: max-content 1fr;
+            padding-top: 25px;
+        }
+
+        &__title {
+            margin-bottom: 0;
+            padding-bottom: 57px;
+        }
+
+        &__box {
+            padding: 30px 30px;
+        }
+
+        &__text-01 {
+            padding-top: 65px;
+        }
+
+
+    }
+}
+
+@media (min-width: 1320px) {
+    .team {
+        &__title {
+            padding-bottom: 74px;
+        }
+    }
+}
